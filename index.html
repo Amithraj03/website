@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amithraj | Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide UI Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Devicon Tech Stack Logos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+<!-- ================= LOADER ================= -->
+<div id="loader">
+    <div class="loader-ring"></div>
+</div>
+
+
+<!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 left-0 w-full z-50 bg-slate-950/95 backdrop-blur-md border-b border-slate-800">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+
+        <!-- Logo / Name Badge -->
+        <a href="#home" class="group flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 font-extrabold text-lg group-hover:bg-sky-500 group-hover:text-white transition duration-300">
+                A
+            </div>
+            <div>
+                <span class="text-lg sm:text-xl font-bold text-white block leading-tight">RAJ</span>
+                <span class="text-xs text-sky-400 font-medium block"></span>
+            </div>
+        </a>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium">
+            <a href="#home" class="text-sky-400 hover:text-sky-300 transition flex items-center gap-2">
+                <i data-lucide="home" class="w-4 h-4"></i> Home
+            </a>
+            <a href="#about" class="text-slate-300 hover:text-white transition flex items-center gap-2">
+                <i data-lucide="user" class="w-4 h-4"></i> About
+            </a>
+            <a href="#skills" class="text-slate-300 hover:text-white transition flex items-center gap-2">
+                <i data-lucide="code-2" class="w-4 h-4"></i> Skills
+            </a>
+            <a href="#projects" class="text-slate-300 hover:text-white transition flex items-center gap-2">
+                <i data-lucide="folder-git-2" class="w-4 h-4"></i> Projects
+            </a>
+            <a href="#education" class="text-slate-300 hover:text-white transition flex items-center gap-2">
+                <i data-lucide="graduation-cap" class="w-4 h-4"></i> Education
+            </a>
+
+            <!-- Navbar Download CV Button -->
+            <a href="Amithraj_Resume.pdf" download="Amithraj_Resume.pdf"
+               class="px-4 py-2 rounded-full bg-sky-500 text-white hover:bg-sky-400 transition shadow-md shadow-sky-500/20 flex items-center gap-2 font-semibold text-xs sm:text-sm">
+                <i data-lucide="download" class="w-4 h-4"></i> CV
+            </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="menuBtn" class="md:hidden text-white p-1 focus:outline-none" aria-label="Toggle Menu">
+            <i data-lucide="menu"></i>
+        </button>
+
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 pb-6 pt-2 bg-slate-950 border-b border-slate-800">
+        <div class="flex flex-col gap-4 font-medium">
+            <a href="#home" class="mobile-link text-sky-400 py-1 flex items-center gap-3">
+                <i data-lucide="home" class="w-5 h-5"></i> Home
+            </a>
+            <a href="#about" class="mobile-link text-slate-300 hover:text-white py-1 transition flex items-center gap-3">
+                <i data-lucide="user" class="w-5 h-5"></i> About
+            </a>
+            <a href="#skills" class="mobile-link text-slate-300 hover:text-white py-1 transition flex items-center gap-3">
+                <i data-lucide="code-2" class="w-5 h-5"></i> Skills
+            </a>
+            <a href="#projects" class="mobile-link text-slate-300 hover:text-white py-1 transition flex items-center gap-3">
+                <i data-lucide="folder-git-2" class="w-5 h-5"></i> Projects
+            </a>
+            <a href="#education" class="mobile-link text-slate-300 hover:text-white py-1 transition flex items-center gap-3">
+                <i data-lucide="graduation-cap" class="w-5 h-5"></i> Education
+            </a>
+            <a href="Amithraj_Resume.pdf" download="Amithraj_Resume.pdf"
+               class="mobile-link flex justify-center items-center gap-2 text-center mt-2 px-4 py-2.5 rounded-lg bg-sky-500 text-white font-semibold">
+                <i data-lucide="download" class="w-4 h-4"></i> Download CV
+            </a>
+        </div>
+    </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section id="home" class="min-h-screen pt-28 sm:pt-32 pb-16 sm:pb-20 flex items-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+
+            <!-- Hero Intro Text -->
+            <div class="text-center lg:text-left order-2 lg:order-1">
+                <p class="reveal-up text-sky-400 font-semibold tracking-wider text-sm sm:text-base mb-3 sm:mb-4 flex items-center justify-center lg:justify-start gap-2">
+                    <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span> HELLO, I'M
+                </p>
+
+                <h1 class="reveal-up delay-100 text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight">
+                    Amith<span class="text-sky-400">raj</span>
+                </h1>
+
+                <h2 class="reveal-up delay-200 mt-3 sm:mt-5 text-xl sm:text-3xl text-slate-200 font-semibold flex items-center justify-center lg:justify-start gap-2.5">
+                    <i data-lucide="graduation-cap" class="text-sky-400 w-7 h-7"></i> BCA Graduate
+                </h2>
+
+                <p class="reveal-up delay-300 mt-4 sm:mt-6 text-slate-400 text-sm sm:text-base leading-7 sm:leading-8 max-w-xl mx-auto lg:mx-0">
+                    I am a passionate developer with a strong interest in Python, Django and database technologies. I enjoy building practical web applications and continuously learning new technologies.
+                </p>
+
+                <!-- Hero Action Buttons -->
+                <div class="reveal-up delay-400 mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <a href="Amithraj_Resume.pdf" download="Amithraj_Resume.pdf"
+                       class="w-full sm:w-auto flex items-center justify-center gap-2.5 px-6 py-3 rounded-lg bg-sky-500 text-white font-semibold
+                              hover:bg-sky-400 hover:-translate-y-0.5 transition shadow-lg shadow-sky-500/25 border border-sky-400/30 group">
+                        <i data-lucide="download" class="w-4 h-4 group-hover:translate-y-0.5 transition"></i>
+                        <span>Download CV</span>
+                    </a>
+
+                    <a href="#projects"
+                       class="w-full sm:w-auto flex items-center justify-center gap-2.5 px-6 py-3 rounded-lg border border-slate-700
+                              bg-slate-900/60 text-slate-200 font-semibold hover:border-sky-400 hover:text-sky-400 hover:-translate-y-0.5 transition">
+                        <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        <span>View Projects</span>
+                    </a>
+                </div>
+
+                <!-- Social Links (LinkedIn removed) -->
+                <div class="reveal-up delay-400 flex justify-center lg:justify-start gap-4 mt-8">
+                    <a href="mailto:amithrajganiga@.com"
+                       title="Email"
+                       class="w-11 h-11 rounded-full border border-slate-700 flex items-center justify-center text-slate-300 hover:text-sky-400 hover:border-sky-400 hover:-translate-y-1 transition">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </a>
+
+                    <a href="https://github.com/Amithraj03"
+                       target="_blank"
+                       title="GitHub Profile"
+                       class="w-11 h-11 rounded-full border border-slate-700 flex items-center justify-center text-slate-300 hover:text-sky-400 hover:border-sky-400 hover:-translate-y-1 transition">
+                        <i class="devicon-github-original text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Image Section -->
+            <div class="flex justify-center order-1 lg:order-2 reveal-scale delay-200">
+                <div class="relative floating group">
+                    <div class="absolute inset-0 bg-sky-400/20 blur-3xl rounded-full group-hover:bg-sky-400/40 group-hover:scale-110 transition duration-500"></div>
+                    <div class="relative w-60 h-60 sm:w-80 sm:h-80 rounded-full p-2 bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600 group-hover:rotate-6 group-hover:scale-105 transition-all duration-500 ease-out shadow-2xl cursor-pointer">
+                        <img src="profile.png" alt="Amithraj" class="w-full h-full object-cover rounded-full border-4 border-slate-900 group-hover:brightness-105 transition duration-300">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <div class="text-center reveal-up">
+            <p class="text-sky-500 font-semibold text-sm sm:text-base">GET TO KNOW ME</p>
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">About Me</h2>
+            <div class="w-16 h-1 bg-sky-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="mt-10 sm:mt-14 grid md:grid-cols-2 gap-10 items-center">
+            <div class="reveal-left delay-100">
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-3">
+                    <i data-lucide="user-check" class="text-sky-500 w-7 h-7"></i>
+                    A little about me
+                </h3>
+                <p class="mt-4 sm:mt-5 text-slate-600 text-sm sm:text-base leading-7 sm:leading-8">
+                    I am a BCA graduate interested in software development and web technologies. I have a strong interest in Python and Django and enjoy understanding how applications work from the backend to the database.
+                </p>
+                <p class="mt-4 text-slate-600 text-sm sm:text-base leading-7 sm:leading-8">
+                    I am continuously improving my technical knowledge, exploring new technologies and looking for opportunities where I can learn, contribute and grow as a developer.
+                </p>
+            </div>
+
+            <!-- Quick Info Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="reveal-up delay-100 p-5 rounded-xl bg-slate-50 border border-slate-200 hover:border-sky-300 hover:shadow-md transition duration-300">
+                    <div class="w-10 h-10 rounded-lg bg-sky-100 flex items-center justify-center">
+                        <i data-lucide="map-pin" class="text-sky-600 w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-semibold mt-3 text-slate-900">Location</h4>
+                    <p class="text-sm text-slate-500 mt-1">Kundapura, India</p>
+                </div>
+
+                <div class="reveal-up delay-200 p-5 rounded-xl bg-slate-50 border border-slate-200 hover:border-sky-300 hover:shadow-md transition duration-300">
+                    <div class="w-10 h-10 rounded-lg bg-sky-100 flex items-center justify-center">
+                        <i data-lucide="graduation-cap" class="text-sky-600 w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-semibold mt-3 text-slate-900">Degree</h4>
+                    <p class="text-sm text-slate-500 mt-1">BCA Graduate</p>
+                </div>
+
+                <div class="reveal-up delay-300 p-5 rounded-xl bg-slate-50 border border-slate-200 hover:border-sky-300 hover:shadow-md transition duration-300">
+                    <div class="w-10 h-10 rounded-lg bg-sky-100 flex items-center justify-center">
+                        <i data-lucide="cpu" class="text-sky-600 w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-semibold mt-3 text-slate-900">Focus</h4>
+                    <p class="text-sm text-slate-500 mt-1">Python & Django</p>
+                </div>
+
+                <div class="reveal-up delay-400 p-5 rounded-xl bg-slate-50 border border-slate-200 hover:border-sky-300 hover:shadow-md transition duration-300">
+                    <div class="w-10 h-10 rounded-lg bg-sky-100 flex items-center justify-center">
+                        <i data-lucide="languages" class="text-sky-600 w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-semibold mt-3 text-slate-900">Languages</h4>
+                    <p class="text-sm text-slate-500 mt-1">English, Kannada</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="py-16 sm:py-24 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <div class="text-center reveal-up">
+            <p class="text-sky-500 font-semibold text-sm sm:text-base">WHAT I WORK WITH</p>
+            <h2 class="text-3xl sm:text-4xl font-bold mt-2 text-slate-900">Skills & Tech Stack</h2>
+            <div class="w-16 h-1 bg-sky-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="mt-10 sm:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+            <!-- Python Card -->
+            <div class="reveal-up delay-100 p-6 sm:p-7 bg-white rounded-2xl border border-slate-200 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300 transition duration-300 group">
+                <div class="w-14 h-14 rounded-2xl bg-sky-50 border border-sky-100 flex items-center justify-center group-hover:scale-110 transition duration-300">
+                    <i class="devicon-python-plain text-3xl text-sky-600"></i>
+                </div>
+                <h3 class="font-bold text-xl mt-5 text-slate-900">Python</h3>
+                <p class="text-slate-500 text-sm mt-2">Programming & problem solving</p>
+            </div>
+
+            <!-- Django Card -->
+            <div class="reveal-up delay-200 p-6 sm:p-7 bg-white rounded-2xl border border-slate-200 hover:-translate-y-2 hover:shadow-xl hover:border-emerald-300 transition duration-300 group">
+                <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center group-hover:scale-110 transition duration-300">
+                    <i class="devicon-django-plain text-3xl text-emerald-700"></i>
+                </div>
+                <h3 class="font-bold text-xl mt-5 text-slate-900">Django</h3>
+                <p class="text-slate-500 text-sm mt-2">Backend web development</p>
+            </div>
+
+            <!-- C Language Card -->
+            <div class="reveal-up delay-300 p-6 sm:p-7 bg-white rounded-2xl border border-slate-200 hover:-translate-y-2 hover:shadow-xl hover:border-blue-300 transition duration-300 group">
+                <div class="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center group-hover:scale-110 transition duration-300">
+                    <i class="devicon-c-plain text-3xl text-blue-600"></i>
+                </div>
+                <h3 class="font-bold text-xl mt-5 text-slate-900">C Language</h3>
+                <p class="text-slate-500 text-sm mt-2">Programming fundamentals</p>
+            </div>
+
+            <!-- Database Card -->
+            <div class="reveal-up delay-400 p-6 sm:p-7 bg-white rounded-2xl border border-slate-200 hover:-translate-y-2 hover:shadow-xl hover:border-indigo-300 transition duration-300 group">
+                <div class="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center group-hover:scale-110 transition duration-300">
+                    <i class="devicon-postgresql-plain text-3xl text-indigo-600"></i>
+                </div>
+                <h3 class="font-bold text-xl mt-5 text-slate-900">Databases</h3>
+                <p class="text-slate-500 text-sm mt-2">Data storage & SQL concepts</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <div class="text-center reveal-up">
+            <p class="text-sky-500 font-semibold text-sm sm:text-base">MY WORK</p>
+            <h2 class="text-3xl sm:text-4xl font-bold mt-2 text-slate-900">Projects</h2>
+            <div class="w-16 h-1 bg-sky-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="mt-10 sm:mt-14 max-w-3xl mx-auto reveal-scale delay-100">
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 hover:shadow-xl hover:border-sky-200 transition duration-300">
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200/80 pb-5">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-sky-100 border border-sky-200 flex items-center justify-center shrink-0">
+                            <i data-lucide="message-square-code" class="text-sky-600 w-6 h-6 sm:w-7 sm:h-7"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-bold text-slate-900">Real-Time Chat Application</h3>
+                            <p class="text-slate-500 text-xs sm:text-sm font-medium mt-0.5">Full-Stack Web Application</p>
+                        </div>
+                    </div>
+
+                    <span class="self-start sm:self-auto px-3 py-1.5 text-xs font-semibold tracking-wide rounded-full bg-slate-900 text-slate-200 border border-slate-700 shadow-sm flex items-center gap-2 whitespace-nowrap">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span> Production Ready
+                    </span>
+                </div>
+
+                <p class="mt-5 text-slate-600 text-sm sm:text-base leading-7">
+                    A real-time communication platform enabling instant messaging between users with low latency. Built with WebSocket for bidirectional data exchange and MongoDB for fast, scalable message storage.
+                </p>
+
+                <!-- Technologies Used -->
+                <div class="mt-6">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Technologies Used</p>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs sm:text-sm font-semibold text-slate-700 flex items-center gap-2 shadow-xs hover:border-sky-300 transition">
+                            <i class="devicon-html5-plain text-orange-500 text-base"></i> HTML5
+                        </span>
+                        <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs sm:text-sm font-semibold text-slate-700 flex items-center gap-2 shadow-xs hover:border-sky-300 transition">
+                            <i class="devicon-css3-plain text-blue-500 text-base"></i> CSS3
+                        </span>
+                        <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs sm:text-sm font-semibold text-slate-700 flex items-center gap-2 shadow-xs hover:border-sky-300 transition">
+                            <i class="devicon-javascript-plain text-yellow-500 text-base"></i> JavaScript
+                        </span>
+                        <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs sm:text-sm font-semibold text-slate-700 flex items-center gap-2 shadow-xs hover:border-sky-300 transition">
+                            <i class="devicon-mongodb-plain text-emerald-600 text-base"></i> MongoDB
+                        </span>
+                        <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs sm:text-sm font-semibold text-slate-700 flex items-center gap-2 shadow-xs hover:border-sky-300 transition">
+                            <i data-lucide="zap" class="w-4 h-4 text-amber-500"></i> WebSocket
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="py-16 sm:py-24 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <div class="text-center reveal-up">
+            <p class="text-sky-500 font-semibold text-sm sm:text-base">MY ACADEMIC JOURNEY</p>
+            <h2 class="text-3xl sm:text-4xl font-bold mt-2 text-slate-900">Education</h2>
+            <div class="w-16 h-1 bg-sky-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="mt-10 sm:mt-14 max-w-3xl mx-auto">
+            <div class="relative pl-6 sm:pl-8 border-l-2 border-sky-300 reveal-left delay-100">
+                <div class="absolute -left-[9px] sm:-left-3 top-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-sky-500 border-4 border-slate-50 shadow-sm"></div>
+
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 hover:shadow-xl transition duration-300">
+                    <div class="flex flex-col sm:flex-row justify-between items-start gap-3">
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="text-sky-500 w-6 h-6"></i>
+                                Bachelor of Computer Applications
+                            </h3>
+
+                            <p class="text-sky-600 font-medium mt-1 sm:mt-2 flex items-center gap-2 text-sm sm:text-base">
+                                <i data-lucide="building" class="w-4 h-4"></i> Bhandarkars Arts and Science College
+                            </p>
+
+                            <p class="text-slate-500 text-sm mt-1 flex items-center gap-2">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-slate-400"></i> Kundapura
+                            </p>
+                        </div>
+
+                        <!-- First Class Distinction Badge -->
+                        <span class="px-3.5 py-1.5 rounded-full bg-slate-900 text-sky-300 border border-slate-700 text-xs sm:text-sm font-semibold shrink-0 flex items-center gap-2 shadow-sm">
+                            <i data-lucide="award" class="w-4 h-4 text-sky-400"></i> First Class Distinction
+                        </span>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm text-slate-600 pt-4 border-t border-slate-100 font-medium">
+                        <span class="flex items-center gap-2">
+                            <i data-lucide="calendar" class="w-4 h-4 text-sky-500"></i>
+                            2023 – 2026
+                        </span>
+
+                        <span class="flex items-center gap-2">
+                            <i data-lucide="award" class="w-4 h-4 text-sky-500"></i>
+                            CGPA: 8.78
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-16 sm:py-24 bg-slate-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <div class="text-center reveal-up">
+            <p class="text-sky-400 font-semibold text-sm sm:text-base">GET IN TOUCH</p>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Let's Connect</h2>
+
+            <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto mt-4 sm:mt-5">
+                I'm always interested in learning, opportunities and connecting with people in the technology field.
+            </p>
+
+            <div class="w-16 h-1 bg-sky-500 mx-auto mt-5 rounded-full"></div>
+        </div>
+
+        <!-- Contact Links (LinkedIn removed) -->
+        <div class="mt-10 sm:mt-12 flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+            <a href="mailto:amithrajganiga@gmail.com"
+               class="reveal-up delay-100 flex items-center justify-center gap-3 px-6 py-3 rounded-lg border border-slate-700 bg-slate-800/50 text-white hover:border-sky-400 hover:bg-slate-800 hover:text-sky-400 transition shadow-sm">
+                <i data-lucide="mail" class="w-5 h-5 text-sky-400"></i>
+                <span>Email Me</span>
+            </a>
+
+            <a href="https://github.com/Amithraj03"
+               target="_blank"
+               class="reveal-up delay-200 flex items-center justify-center gap-3 px-6 py-3 rounded-lg border border-slate-700 bg-slate-800/50 text-white hover:border-sky-400 hover:bg-slate-800 hover:text-sky-400 transition shadow-sm">
+                <i class="devicon-github-original text-xl"></i>
+                <span>GitHub</span>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-slate-950 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left">
+        <p class="text-slate-500 text-xs sm:text-sm">
+            © 2026 Amithraj. All rights reserved.
+        </p>
+        <p class="text-slate-600 text-xs sm:text-sm flex items-center gap-1.5">
+            Built with HTML & Tailwind CSS
+        </p>
+    </div>
+</footer>
+
+<!-- External JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
